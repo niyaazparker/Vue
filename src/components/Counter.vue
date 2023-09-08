@@ -1,4 +1,5 @@
 <template>
+    <h1>Counter</h1>
     <div class="counter mb-5">
       <div class="count" :class="{ 'positive': count > 0, 'negative': count < 0 }">
         {{ count }}

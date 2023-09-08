@@ -3,8 +3,10 @@
     <template>
         <div>
             <h1>String reversal</h1>
-            <input v-model="inputStr" @input="reverseString" placeholder="Enter a string">
-            <p>Reversed String: {{ reversedStr }}</p>
+            
+                <input class="form-control" v-model="inputStr" @input="reverseString" placeholder="Enter a string">
+                <p>Reversed String: {{ reversedStr }}</p>
+               
         </div>
     </template>
 

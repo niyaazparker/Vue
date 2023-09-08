@@ -77,12 +77,27 @@
         </div>
       
         <div class="container main-content mt-4">
-          <div class="row"><Counter /></div>
 
-          <div class="row"><LibraryBooks /></div>
-
-          <div class="row"><StringReversal /></div>
+          <div class="row">
+              <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                <Counter />
+              </div>
           
+
+         
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+              <LibraryBooks />
+            </div>
+         
+
+         
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+              <StringReversal />
+            </div>
+          </div>
+
+           <hr class="featurette-divider">
+           
           <div class="row">
             <div class="col-lg-4">
               <img class="rounded-circle" src="..\src\assets\images\payroll-sb-continious_calcs.webp" width="140" height="140"/>

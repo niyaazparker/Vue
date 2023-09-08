@@ -2,20 +2,20 @@
     <template>
         <div>
             <h1>Library Books</h1>
+            <div class="d-flex mx-auto mb-3">
+                <!-- Search input -->
+                <input class="form-control" type="text" v-model="searchTerm" placeholder="Search by title or author">
 
-            <!-- Search input -->
-            <input type="text" v-model="searchTerm" placeholder="Search by title or author">
-
-            <!-- Sort buttons -->
-            <button class="btn btn-primary mx-1" @click="toggleSort('title')">Sort by Title ({{ sortBy === 'title' ? sortOrder : 'asc' }})</button>
-            <button class="btn btn-primary mx-1" @click="toggleSort('author')">Sort by Author ({{ sortBy === 'author' ? sortOrder : 'asc' }})</button>
-
+                <!-- Sort buttons -->
+                <button class="btn btn-primary mx-1 btn-sm" @click="toggleSort('title')">Title ({{ sortBy === 'title' ? sortOrder : 'asc' }})</button>
+                <button class="btn btn-primary mx-1 btn-sm" @click="toggleSort('author')">Author ({{ sortBy === 'author' ? sortOrder : 'asc' }})</button>
+            </div>
             <!-- Book list -->
-            <ul>
-                <li v-for="book in filteredBooks" :key="book.title">
-                    {{ book.title }} by {{ book.author }} ({{ book.year }})
-                </li>
-            </ul>
+                <ul>
+                    <li class="text-start" v-for="book in filteredBooks" :key="book.title">
+                        {{ book.title }} by {{ book.author }} ({{ book.year }})
+                    </li>
+                </ul>
         </div>
     </template>
 <script>
@@ -62,14 +62,3 @@ methods: {
 };
 </script>
 
-// Create the Vue app
-new Vue({
-    el: '#app',
-    data: {
-        books: [
-            { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
-            { title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 },
-            // Add more books as needed
-        ]
-    }
-});

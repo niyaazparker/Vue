@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+a {text-decoration: none;}
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.text-prime {
+    color: $primary-color;
+    &:hover {color: $primary-alt-color}
+}
+
+// Button override
+.btn-primary {
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+    &:hover,&:active, &:focus {background-color: $primary-alt-color !important;border-color: $primary-alt-color !important;outline: none !important;box-shadow: none !important;}
+}
+
+.form-control:focus {
+    border-color: $primary-color;
+    box-shadow: none !important;
+}
+
+// Header styles
+header {
+    background-color: $background-color;
+}
+
+.navbar-dark .navbar-toggler {
+    color: $primary-color;
+    &:focus {
+        box-shadow: 0 0 0 .15rem;
+      }
+}
+.navbar-brand {
+    font-size: 24px;
+}
+
+// Footer styles
+footer {
+    background-color: $footer-color;
+    color: $text-color;
+    text-align: center;
+    padding: 10px 0;
+}
